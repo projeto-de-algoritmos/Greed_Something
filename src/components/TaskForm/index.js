@@ -26,7 +26,6 @@ function TaskForm({ edit, submit }) {
     setFinalTime(e.target.value);
   };
 
-
   const handleSubmit = e => {
     e.preventDefault();
 
@@ -42,7 +41,7 @@ function TaskForm({ edit, submit }) {
   };
 
   return (
-    <form onSubmit={handleSubmit} style={{ marginBottom: '32px'}}>
+    <form onSubmit={handleSubmit} style={{ margin: '0px auto 32px auto'}}>
       {edit ? (
         <Container>
           <Input
@@ -85,7 +84,7 @@ function TaskForm({ edit, submit }) {
               }}
             />
           </TimeContainer>
-          <EditButton onClick={handleSubmit}>
+          <EditButton type='submit'onClick={handleSubmit}>
             Atualizar
           </EditButton>
         </Container>
@@ -128,10 +127,9 @@ function TaskForm({ edit, submit }) {
               inputProps={{
                 step: 300, 
               }}
-              style={{ color: '#fff !important'}}
             />
           </TimeContainer>
-          <Button onClick={handleSubmit}>
+          <Button type='submit' onClick={handleSubmit}>
             Adicionar tarefa
           </Button>
         </Container>

@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-
-
 export const Button = styled.button`
+  width: 95%;
   padding: 16px;
   border: none;
-  margin: 10px;
+  margin: 10px auto;
   border-radius: 4px;
+  height: 56px;
   cursor: pointer;
   outline: none;
   background: linear-gradient(

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import TaskForm from '../TaskForm';
 import Task from '../Task';
-import { Button} from './styles';
+import { Button } from './styles';
 
 
 function TaskList() {
@@ -38,25 +38,23 @@ function TaskList() {
       }
       return task;
     });
+    
     setTasks(updatedTasks);
   };
 
-  const consoleTest = () => {
+  const greed = () => {
     //Sort tasks by ascending initial time
     const sortedTasks = tasks.sort((a, b) => (a.finalTime > b.finalTime) ? 1 : -1)
     let optimizedTasks = [];
     let currentTask;
 
     for (var i = 0; i < sortedTasks.length; i++) {
-      console.log('entrou no for');
       if (i === 0) {
-        console.log('entrou no if');
         optimizedTasks.push(sortedTasks[i])
         currentTask = sortedTasks[i];
       }
       else {
-        if (sortedTasks[i].initialTime >= currentTask.finalTime) {
-          console.log('entrou no elif');
+        if (sortedTasks[i].initialTime > currentTask.finalTime) {
           optimizedTasks.push(sortedTasks[i]);
           currentTask = sortedTasks[i];
         }
@@ -75,8 +73,7 @@ function TaskList() {
         removeTask={removeTask}
         updateTask={updateTask}
       />
-      <Button type='button' onClick={() => consoleTest()}>Otimizar</Button>
-      
+      <Button type='button' onClick={() => greed()}>Otimizar</Button>
     </>
   );
 }

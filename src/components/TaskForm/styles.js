@@ -10,7 +10,7 @@ export const Input = styled.input`
   padding: 14px 32px 14px 16px;
   border-radius: 4px;
   border: ${props => props.edit ? '2px solid #149fff' : '2px solid #5d0cff' };
-  margin: 0 10px;
+  margin-right: 10px;
   outline: none;
   width: 200px;
   background: transparent;
@@ -49,7 +49,6 @@ export const EditButton = styled.button`
   );
   color: #fff;
   text-transform: capitalize;
-
 `;
 
 export const TimeContainer = styled.div`
@@ -60,6 +59,5 @@ export const TimeContainer = styled.div`
 
   label, input {
     color: #fff !important;
-    border: none !important;
   }
 `;
