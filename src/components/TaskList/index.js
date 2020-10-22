@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import TaskForm from '../TaskForm';
 import Task from '../Task';
+import { Button} from './styles';
+
 
 function TaskList() {
   const [tasks, setTasks] = useState([]);
@@ -39,6 +41,30 @@ function TaskList() {
     setTasks(updatedTasks);
   };
 
+  const consoleTest = () => {
+    //Sort tasks by ascending initial time
+    const sortedTasks = tasks.sort((a, b) => (a.finalTime > b.finalTime) ? 1 : -1)
+    let optimizedTasks = [];
+    let currentTask;
+
+    for (var i = 0; i < sortedTasks.length; i++) {
+      console.log('entrou no for');
+      if (i === 0) {
+        console.log('entrou no if');
+        optimizedTasks.push(sortedTasks[i])
+        currentTask = sortedTasks[i];
+      }
+      else {
+        if (sortedTasks[i].initialTime >= currentTask.finalTime) {
+          console.log('entrou no elif');
+          optimizedTasks.push(sortedTasks[i]);
+          currentTask = sortedTasks[i];
+        }
+      }
+    }
+    setTasks(optimizedTasks)
+  }
+
   return (
     <>
       <h1>Quais são suas tarefas para hoje?</h1>
@@ -49,7 +75,8 @@ function TaskList() {
         removeTask={removeTask}
         updateTask={updateTask}
       />
-      {console.log(tasks)}
+      <Button type='button' onClick={() => consoleTest()}>Otimizar</Button>
+      
     </>
   );
 }

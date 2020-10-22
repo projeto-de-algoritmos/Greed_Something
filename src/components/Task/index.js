@@ -35,6 +35,9 @@ function Task({ tasks, completeTask, removeTask, updateTask }){
       <div key={task.id} onClick={() => completeTask(task.id)}>
         {task.text}
       </div>
+      <div > 
+        {task.initialTime} - {task.finalTime}
+      </div>
       <Icons>
         <RiCloseCircleLine
           onClick={() => removeTask(task.id)}
