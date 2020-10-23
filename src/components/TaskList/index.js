@@ -52,7 +52,7 @@ function TaskList() {
         currentTask = sortedTasks[i];
       }
       else {
-        if (sortedTasks[i].initialTime > currentTask.finalTime) {
+        if (sortedTasks[i].initialTime >= currentTask.finalTime) {
           optimizedTasks.push(sortedTasks[i]);
           currentTask = sortedTasks[i];
         }
