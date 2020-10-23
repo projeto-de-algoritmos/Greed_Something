@@ -73,7 +73,7 @@ A aplicação possui uma página única, a interação se da por meio do formul�
 
 
 ## Apresentação
-A apresentação em video está disponível no link: 
+A apresentação em video está disponível no link: https://github.com/projeto-de-algoritmos/Greed_TaskList/blob/master/Apresentacao.mp4
 
 ## Referências
 - Vídeoaula do professor
