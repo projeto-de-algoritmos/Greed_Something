@@ -11,7 +11,7 @@
 | 15/0137567  |  Lucas Siqueira Rodrigues |
 
 ## Sobre 
-Criamos uma ferramenta organizacional onde o usuário pode gerenciar suas tarefas e otimiza-lás para que ele saiba o maxímo de tarefas que ele pode realizar em um dia. Para isso é feito o cadastro da hora inicial e final da tarefa, sendo possível também nomear, editar e deletar uma tarefa, uma que todas as tarefas desejadas sejam cadastradas, o usuário deve clicar no botão "Otimizar" para rodar o algoritmo do interval scheduling e transformar a lista de tarefas em uma lista otimizada.
+Criamos uma ferramenta organizacional onde o usuário pode gerenciar suas tarefas e otimiza-lás para que ele saiba o maxímo de tarefas que ele pode realizar em um dia. Para isso é feito o cadastro da hora inicial e final da tarefa, sendo possível também nomear, editar e deletar uma tarefa, uma vez que todas as tarefas desejadas sejam cadastradas, o usuário deve clicar no botão "Otimizar" para rodar o algoritmo do interval scheduling e transformar a lista de tarefas em uma lista otimizada.
 
 ## Screenshots
 
@@ -45,7 +45,6 @@ Criamos uma ferramenta organizacional onde o usuário pode gerenciar suas tarefa
 **Tecnologias**: 
 
 - [React](https://pt-br.reactjs.org/)
-- [React-sticky-box](https://www.npmjs.com/package/react-sticky-box)
 - [Styled-components](https://styled-components.com/)
 - [Material-UI](https://material-ui.com/pt/)
 - [React-icons](https://react-icons.github.io/react-icons/)
