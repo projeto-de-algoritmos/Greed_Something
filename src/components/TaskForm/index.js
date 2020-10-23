@@ -9,10 +9,12 @@ function TaskForm({ edit, submit }) {
   const [finalTime, setFinalTime] = useState(edit ? edit.finalTime : '00:00');
 
   const inputRef = useRef(null);
+  const initialTimeRef = useRef(null);
+  const finalTimeRef = useRef(null);
 
   useEffect(() => {
     inputRef.current.focus();
-  });
+  },[]);
 
   const handleChangeText = e => {
     setText(e.target.value);
@@ -57,6 +59,7 @@ function TaskForm({ edit, submit }) {
               id="start"
               label="Inicio"
               type="time"
+              ref={initialTimeRef}
               defaultValue="00:00"
               value={initialTime}
               onChange={handleChangeInitialTime}
@@ -71,6 +74,7 @@ function TaskForm({ edit, submit }) {
           <TimeContainer edit>
             <TextField
               id="end"
+              ref={finalTimeRef}
               label="Fim"
               type="time"
               defaultValue="00:00"
@@ -103,6 +107,7 @@ function TaskForm({ edit, submit }) {
               label="Inicio"
               type="time"
               value={initialTime}
+              ref={initialTimeRef}
               defaultValue="00:00"
               onChange={handleChangeInitialTime}
               InputLabelProps={{
@@ -120,6 +125,7 @@ function TaskForm({ edit, submit }) {
               type="time"
               defaultValue="00:00"
               value={finalTime}
+              ref={finalTimeRef}
               onChange={handleChangeFinalTime}
               InputLabelProps={{
                 shrink: true,

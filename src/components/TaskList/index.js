@@ -3,7 +3,6 @@ import TaskForm from '../TaskForm';
 import Task from '../Task';
 import { Button } from './styles';
 
-
 function TaskList() {
   const [tasks, setTasks] = useState([]);
 
@@ -38,7 +37,6 @@ function TaskList() {
       }
       return task;
     });
-    
     setTasks(updatedTasks);
   };
 
